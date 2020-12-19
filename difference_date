@@ -1,0 +1,21 @@
+import random
+import datetime
+
+d = datetime.datetime.now()
+month = d.month
+year = d.year
+randMonth = random.randrange(1, 12+1)
+randYear = random.randrange(1980, year+1)
+
+print (randMonth,'/',randYear)
+
+diffMonth = month - randMonth
+diffYear = year - randYear
+
+print (diffMonth,'/',diffYear)
+
+if diffMonth<0:
+    if diffMonth == -1:
+        print("There is ", diffMonth * -1, " till this date.")
+    else:
+        print ("There are ", diffMonth*-1, " till this date.")
